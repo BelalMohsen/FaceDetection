@@ -1,4 +1,6 @@
 # FaceDetection
 Initailising New Repository for Facial detection system
 
-In progress......
+#Will be developing in Python
+work in progress. 
+
