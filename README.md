@@ -41,4 +41,11 @@ all the images of people will be stored under FacesDB folder
 
 ## 3. Testing the Program
 
+* Once the training is done we are ready to test the model on youtube streaming videos.
+* To test it get the youtube video url from youtube and pass it as an agrument to **Main.py file**
 
+      python Main.py --url 'https://youtu.be/t27OqUlCSOg'
+
+* Thats it ...! The video will get played and faces will get identified automatiaclly. Also the video will get stored on current working directory.
+
+* you can change the threshold values as per your requirement.
