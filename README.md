@@ -44,8 +44,24 @@ all the images of people will be stored under FacesDB folder
 * Once the training is done we are ready to test the model on youtube streaming videos.
 * To test it get the youtube video url from youtube and pass it as an agrument to **Main.py file**
 
-      python Main.py --url 'https://youtu.be/t27OqUlCSOg'
-
+      python Main.py --url 'https://youtu.be/t27OqUlCSOg' --thresh 0.7
+      
 * Thats it ...! The video will get played and faces will get identified automatiaclly. Also the video will get stored on current working directory.
 
 * you can change the threshold values as per your requirement.
+
+=========================**ALL DONE** ===============================
+
+# Dependencies 
+
+* The following packages shouldbe installed on your system before running the scripts
+
+1. Open cv (Cv2) 3.4
+2. dlib
+3. pickle
+4. pafy and youtube_dl for streaming youtube videos
+5. imutils
+6. face_recognition (pip install face_recognition) https://pypi.org/project/face_recognition/
+7. google_images_download (pip install google_images_download) https://pypi.org/project/google-images-download/1.0.1/ for downloading the images from google.
+
+===========xxxxxxxxxxxxxx=================
