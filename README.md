@@ -50,6 +50,20 @@ all the images of people will be stored under FacesDB folder as shown here: (htt
 
 * you can change the threshold values as per your requirement.
 
+
+## 4 : Person Finder:
+
+* The file FindPerson can find or tag the person in the Vidoe and it will create a bounding box arround the face. 
+* if you want to find anyone in any video, just pass the name of person through command line argument and if the person is available then it will get tagged and box will get drawn on his face. If the person is not available in the frame then message will get appear "No Match!"
+ 
+* You can specify the multiple people in the argument whom you want to identify.
+
+*Here in this example I want to find  "Mesut Ozil',  "Jerome Boateng",  and "Manuel Neuer". check out how system responded to it. (results can be seen on this video : https://github.com/VaibhavKhamgaonkar/FaceDetection/blob/master/FindPerson.mp4)
+
+      python FindPerson.py --url 'https://youtu.be/t27OqUlCSOg' --find 'Mesut Ozil','Jerome Boateng','Manuel Neuer'
+      
+      
+
 =========================**ALL DONE** ===============================
 
 # Dependencies 
