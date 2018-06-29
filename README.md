@@ -1,11 +1,14 @@
 # Face Detection using python and Dlib/Face_recognition
 
-It contains 3 part 
+__It contains 3 parts__
+
 ## 1. Gettings the data/Images from google image search
   A file name "**ImageDownload.py**" will donload the image from google and store it in you local hard drive in Current working directory
   you can use the comand line arguments to specify which player image you want and how much images you want to download
   i.e run this command 
-  ### "python ImageDownload.py --peopleList 'Albert Einstein','Nicola Tesla' --limit 5 "
+  
+          python ImageDownload.py --peopleList 'Albert Einstein','Nicola Tesla' --limit 5 
+          
    : -- peopleList argument expects list of peoples' images. you can specify single iamge or multiple seperated by comma.
    
    : -- limit argument specifies how many images to download. here it will downlload 5 images for each person (i.e. Albert Einstein and Nicola Tesla)
@@ -32,4 +35,10 @@ all the images of people will be stored under FacesDB folder
 * I have used the face_recognition api to do this stuff.
 
 * After training is over the model gets saved into your local drive at the **Encoding_Data/** folder.
+        
+      python FaceTraining.py
+
+
+## 3. Testing the Program
+
 
