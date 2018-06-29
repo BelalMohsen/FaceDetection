@@ -21,7 +21,7 @@ FacesDB :
 
 ---- Nicola Tesla -- 5 images
    
-all the images of people will be stored under FacesDB folder
+all the images of people will be stored under FacesDB folder as shown here: (https://github.com/VaibhavKhamgaonkar/FaceDetection/blob/master/Screen%20Shot%202018-06-29%20at%202.56.38%20PM.png)
 * the next operation performed on the images is to crop the specific face area and replace the originial image. The command will take care of that thing as well. so finally you have al lthe face data created on your hard drive in working directory.
 
 
