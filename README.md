@@ -66,3 +66,8 @@ all the images of people will be stored under FacesDB folder as shown here: (htt
 8. numpy
 
 ===========xxxxxxxxxxxxxx=================
+
+
+**You can modify the code as per your requirments. Any comments suggestions or feedback is much appreciated.
+
+
