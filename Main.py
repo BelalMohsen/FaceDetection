@@ -9,6 +9,7 @@ import imutils
 from imutils.video import FileVideoStream
 from imutils.video import FPS
 import argparse
+from unkownFacesTraning import unknownFacesTraining
 
 
 # =============================================================================
@@ -38,6 +39,7 @@ def loadEmbeddings(path, file='FaceEncodingsModel.pkl'):
 path = os.path.dirname(os.path.abspath("__file__")) + '/'    
 embeddingsPath = path+ 'Encoding_Data/'   
 faceModel_path = 'shape_predictor_68_face_landmarks.dat'
+faceDbPath = path + 'FacesDB/'
 
 model = loadEmbeddings(embeddingsPath,file='FaceEncodingsModel.pkl')
 #getting the people list
@@ -63,8 +65,8 @@ url = args["url"]#'https://youtu.be/TOu8kEjG1aQ'
   #https://youtu.be/t27OqUlCSOg
 videoPafy = pafy.new(url)
 best = videoPafy.getbest(preftype="webm")
-#global cnt
-#cnt=0
+global cnt
+count=0
 #video=cv2.VideoCapture(best.url)
 #cap = cv2.VideoCapture(0)
 #cap = cv2.VideoCapture(0)
@@ -173,7 +175,15 @@ while cap.more():
             cv2.rectangle(frame,(x, y), (x+w, y+h), (0,0,255),1)
             cv2.putText(frame, text, (x,y),cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,0,255),2)
             
-        
+# =============================================================================
+#             Capturing the Unkown data for next lever of self training 
+# =============================================================================
+            if not os.path.exists(faceDbPath + 'Unknown'):
+                os.mkdir(faceDbPath + 'Unknown')
+            
+            cv2.imwrite(faceDbPath+'Unknown/'+ str(count) + '.jpg', frame[y:y+h,x:x+w])
+            count+=1
+            
             
               #cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
               
@@ -220,3 +230,13 @@ while cap.more():
 cv2.destroyAllWindows()
 cap.stop()
 writer.release()
+choice = 'y'
+while choice != 'n':
+    choice = str(input('Would you like to check the Unknown faces ? y/n ..\n', ))
+    if choice.lower() =='y':
+        uft = unknownFacesTraining()
+        uft.playWithUnknownImages()
+        break
+    
+
+    
