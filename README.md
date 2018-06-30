@@ -87,6 +87,7 @@ The Demostrations of how it will work is shown here on below link
 6. face_recognition (pip install face_recognition) https://pypi.org/project/face_recognition/
 7. google_images_download (pip install google_images_download) https://pypi.org/project/google-images-download/1.0.1/ for downloading the images from google.
 8. numpy
+9. shutil (for creatingcopying images between folders)
 
 ===========xxxxxxxxxxxxxx=================
 
