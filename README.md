@@ -63,6 +63,15 @@ all the images of people will be stored under FacesDB folder as shown here: (htt
       python FindPerson.py --url 'https://youtu.be/t27OqUlCSOg' --find 'Mesut Ozil','Jerome Boateng','Manuel Neuer'
       
       
+## 5 : Add unknown faces on the go:
+* Added functionality to handle Unknown faces and incorporate these unknown faces into system. 
+* This will now create the data set for unknown faces on the go for user to take action on whether they want to store the person information or discard it.
+
+The Demostrations of how it will work is shown here on below link
+
+**Part 1** : https://www.linkedin.com/feed/update/urn:li:activity:6418826482981920768
+
+**part 2** : https://lnkd.in/fjVkZx3
 
 =========================**ALL DONE** ===============================
 
